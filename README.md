@@ -48,3 +48,12 @@ Then start the VM by running the command `vagrant up`.
 This will make your system download the Linux OS and start up the virtual machine. Unfortunately, this will take a long time on most network connections.
 
 Once it is done, run the command `vagrant ssh`.
+
+===============================================
+
+### Lesson 1 - Get into the Shell
+* `curl` to download a file from the web (eg. `curl http://udacity.github.io/ud595-shell/stuff.zip -o things.zip`)
+* `history` - for a history of commands typed in before.
+* `host udacity.com` - info about DNS, IP address and hosting servers.
+* `uname` - tells us about the operating system, use `uname -a` for more info.
+* Add a `\` when using `'` and other characters in shell.
