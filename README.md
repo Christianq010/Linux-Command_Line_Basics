@@ -56,5 +56,16 @@ Once it is done, run the command `vagrant ssh`.
 * `history` - for a history of commands typed in before.
 * `host udacity.com` - info about DNS, IP address and hosting servers.
 * `uname` - tells us about the operating system, use `uname -a` for more info.
-* Add a `\` when using `'` and other characters in shell.
+* Add a `\` before using `'`,`!` and similar other characters in shell.
 
+### Lesson 2 - Shell commands
+* `ls` - list all files in your current directory.
+* `crtl` + `r` - (reverse-i-search)`': search for a command long lost in your history.
+* `unzip things.zip` - to unzip a file.
+* `cat something.txt anotherthing.txt` - read contents of file by printing onto screen.
+* Use the `tab` button on keyboard to autocomplete filenames.
+* `wc` - word count of file contents.
+* `diff eg.txt eg2.txt` - show differences between these 2 file contents.
+* `man cowsay` - show Manual for program cowsay, press `q` to exit.
+* `less longtest.txt` use less to open long text file.[Less cheat sheet](http://sheet.shiar.nl/less)
+* `nano sometextfile.txt` use nano text shell text editor to open and edit a file. Note: `^` in nano means `ctrl` button on keyboard.
