@@ -67,5 +67,5 @@ Once it is done, run the command `vagrant ssh`.
 * `wc` - word count of file contents.
 * `diff eg.txt eg2.txt` - show differences between these 2 file contents.
 * `man cowsay` - show Manual for program cowsay, press `q` to exit.
-* `less longtest.txt` use less to open long text file.[Less cheat sheet](http://sheet.shiar.nl/less)
+* `less longtest.txt` use less to open long text file.[Less cheat sheet](http://sheet.shiar.nl/less). Note on [Regular Expressions](http://codular.com/regex).
 * `nano sometextfile.txt` use nano text shell text editor to open and edit a file. Note: `^` in nano means `ctrl` button on keyboard.
