@@ -87,12 +87,12 @@ Once it is done, run the command `vagrant ssh`.
 
 * The table below references the same directories accessed differently.
 
-| path                          |  path           |
-| ----                          | -----           |
-| cd/home/                      | cd ..           |
-| cd ../otter                   | cd /home/otter  |
-| cd ./www                      | cd www          |
-| cd../../usr                   | cd /usr         |
+| path                           |  path           |
+| ----                           | -----           |
+| cd /home/                      | cd ..           |
+| cd  ../otter                   | cd /home/otter  |
+| cd ./www                       | cd www          |
+| cd ../../usr                   | cd /usr         |
 
 * Use tab completion
 * Moving file -  `mv sourceFile destination` or `mv item1 item2 directory`
