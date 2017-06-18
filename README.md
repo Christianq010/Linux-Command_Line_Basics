@@ -73,7 +73,8 @@ Once it is done, run the command `vagrant ssh`.
 ### Lesson 3 - The Linux Filesystem
 * In the Filesystem Tree - (root) - var - log - auth.log may be accessed in Linux as `/var/log/auth.log`.
 * `pwd` - print path to current directory
-* `ls` to show files in current directory, `cd` to move directorys (eg.`cd ocean`), `cd ..` to go back to parent directory.
+* `ls`, `ls someDirectory` to show files in current or another directory, `cd` to move directorys (eg.`cd ocean`), `cd ..` to go back to parent directory.
+* Table below shows examples of relative paths and absolute paths.
 
 | absolute path                      | relative path           |
 | -------------                      | -------------           |
@@ -84,3 +85,27 @@ Once it is done, run the command `vagrant ssh`.
 | /home/philip                       | ~                       |
 | /home/philip/ocean/otter           | ~/ocean/otter           |
 
+* The table below references the same directories accessed differently.
+
+| path               |  path           |
+| -------------      | -------------   |
+| cd/home/           | cd ..           |
+| cd ../otter        | cd /home/otter  |
+| cd ./www           | cd www          |
+| cd../../usr        | cd /usr         |
+
+* Use tab completion
+* Moving file -  `mv sourceFile destination` or `mv item1 item2 directory`
+* Copying files - `cp sourceFile destination`
+* `mkdir someName` - to create a new directory. `mkdir /tmp/someName`
+* `rmdir someFileName` - to delete an empty directory, `rm -r junk` - to delete a directory with all its contents in it.
+#### To glob (search using *) -
+* `ls *html` ( search of all files with html in the filename)
+* `ls app*` - returns app.js, app.html
+* `ls *pp*` - returns app.js, app.html
+* `ls app.{css,html}` - (all css and html app files)
+
+#### Q & A's -
+* Copy all the files in the `www` directory that end in `html` to the backUp directory - `cp www/*html backup`
+* List all the files that end in `jpg` or `png` in the current directory - `ls *{jpg,png}` or `ls *jpg *png`
+* Print `Short names:` followed by all the one-character filenames in the current directory. - `echo Short names: ?`
