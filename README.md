@@ -67,5 +67,20 @@ Once it is done, run the command `vagrant ssh`.
 * `wc` - word count of file contents.
 * `diff eg.txt eg2.txt` - show differences between these 2 file contents.
 * `man cowsay` - show Manual for program cowsay, press `q` to exit.
-* `less longtest.txt` use less to open long text file.[Less cheat sheet](http://sheet.shiar.nl/less). Note on [Regular Expressions](http://codular.com/regex).
+* `less longtest.txt` use less to open long text file. [Less cheat sheet](http://sheet.shiar.nl/less). Note on [Regular Expressions](http://codular.com/regex).
 * `nano sometextfile.txt` use nano text shell text editor to open and edit a file. Note: `^` in nano means `ctrl` button on keyboard.
+
+### Lesson 3 - The Linux Filesystem
+* In the Filesystem Tree - (root) - var - log - auth.log may be accessed in Linux as `/var/log/auth.log`.
+* `pwd` - print path to current directory
+* `ls` to show files in current directory, `cd` to move directorys (eg.`cd ocean`), `cd ..` to go back to parent directory.
+
+| absolute path                      | relative path           |
+| -------------                      | -------------           |
+| /home/philip/ocean/clam/           | clam                    |
+| /home/philip/ocean/clam/giant      | clam/giant              |
+| /home/philip/mountain              | ../mountain             |
+| /home/philip/ocean                 | .                       |
+| /home/philip                       | ~                       |
+| /home/philip/ocean/otter           | ~/ocean/otter           |
+
