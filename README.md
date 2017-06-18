@@ -1,4 +1,4 @@
-## Linux Command Line Basics
+## Linux Basics
 
 #### Your own Linux box
 To learn the Linux shell, you need a Linux machine to run it on. But we can't really ship a new Linux computer to every one of you. So instead you will set up a Linux virtual machine (VM) on your own computer.
@@ -50,6 +50,8 @@ This will make your system download the Linux OS and start up the virtual machin
 Once it is done, run the command `vagrant ssh`.
 
 ===============================================
+
+## 01. Linux Command Line Basics
 
 ### Lesson 1 - Get into the Shell
 * `curl` to download a file from the web (eg. `curl http://udacity.github.io/ud595-shell/stuff.zip -o things.zip`)
@@ -109,3 +111,13 @@ Once it is done, run the command `vagrant ssh`.
 * Copy all the files in the `www` directory that end in `html` to the backUp directory - `cp www/*html backup`
 * List all the files that end in `jpg` or `png` in the current directory - `ls *{jpg,png}` or `ls *jpg *png`
 * Print `Short names:` followed by all the one-character filenames in the current directory. - `echo Short names: ?`
+
+==============================================
+
+## 02. Linux - Setting up your own Web Server
+
+### Lesson 1 - Intro to Linux
+* `ls -al` to show all files with additional info about them.
+
+### Lesson 2 - Linux Security
+* 
