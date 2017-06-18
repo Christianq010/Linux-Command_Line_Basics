@@ -120,4 +120,12 @@ Once it is done, run the command `vagrant ssh`.
 * `ls -al` to show all files with additional info about them.
 
 ### Lesson 2 - Linux Security
-* 
+* Show Package Source List - `cat /etc/apt/sources.list`
+* Update Available Package Lists - `sudo apt-get update`
+* Upgrade Installed Packages - `sudo apt-get upgrade`
+* Read manual for package update/upgrades - `man apt-get`
+* Auto remove packages that used - `sudo apt-get autoremove`
+* Install a particular package - `sudo apt-get finger` [List of Ubuntu packages](https://packages.ubuntu.com/)
+* Get info about each user on system `cat /etc/passwd`.
+* Eg. User account `root` would show - User ID (UID): `0`, Group ID(GID): `0`, Home Directory: `/root`, Default Command/shell: `/bin/bash`
+
