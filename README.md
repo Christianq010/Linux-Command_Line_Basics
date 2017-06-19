@@ -129,7 +129,7 @@ Once it is done, run the command `vagrant ssh`.
 * Get info about each user on system `cat /etc/passwd`.
 * Eg. User account `root` would show - User ID (UID): `0`, Group ID(GID): `0`, Home Directory: `/root`, Default Command/shell: `/bin/bash`
 
-* #### *User Management*
+#### *User Management*
 * Creating a new User - `sudo adduser student`, password - student
 * Connecting as new user - `ssh student@127.0.0.1 -p 2222`
 * Give sudo access by - editing file `sudoers.d`
@@ -138,7 +138,7 @@ Once it is done, run the command `vagrant ssh`.
 * Additional info on Sudo Access (https://help.ubuntu.com/community/Sudoers), info on passwd - `man passwd`
 * Log in as student, and try to run `sudo cat /etc/passwd`
 
-* #### *Public Key Encryption*
+#### *Public Key Encryption*
 ##### Local machine
 * Always generate keygen on Localhost, never on server.
 * Open Gitbash as administrator on desktop
@@ -153,4 +153,5 @@ Once it is done, run the command `vagrant ssh`.
 * Run `chmod 700 .ssh`
 * Run `chmod 644 .ssh/authorized_keys`
 
-* *Now proceed to log into your vagrant Student Account directly via SSH key `ssh student@127.0.0.1 -p 2222 -i ~/.ssh/linuxCourse`*
+* *Now proceed to log into your vagrant Student Account directly via SSH key*
+```ssh student@127.0.0.1 -p 2222 -i ~/.ssh/linuxCourse```
