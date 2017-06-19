@@ -129,3 +129,11 @@ Once it is done, run the command `vagrant ssh`.
 * Get info about each user on system `cat /etc/passwd`.
 * Eg. User account `root` would show - User ID (UID): `0`, Group ID(GID): `0`, Home Directory: `/root`, Default Command/shell: `/bin/bash`
 
+* #### *User Management*
+* Creating a new User - `sudo adduser student`, password - student
+* Connecting as new user - `ssh student@127.0.0.1 -p 2222`
+* Give sudo access by - editing file `sudoers.d` -
+* First list sudo files by `sudo ls /etc/sudoers.d`, then copy the file by `sudo cp /etc/sudoers.d/vagrant /etc/sudoers.d/student`
+* Edit file with nano - `sudo nano /etc/sudoers.d/student` and make the `student ALL=(ALL) NOPASSWD:ALL` change.
+* Additional info on Sudo Access (https://help.ubuntu.com/community/Sudoers), info on passwd - `man passwd`
+* Log in as student, and try to run `sudo cat /etc/passwd`
