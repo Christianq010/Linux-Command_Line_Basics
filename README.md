@@ -161,3 +161,22 @@ ssh student@127.0.0.1 -p 2222 -i ~/.ssh/linuxCourse
 * Force SSH key based Authentication for all Users, by editing file sshd - `sudo nano /etc/ssh/sshd_config`
 * Once open with nano , change PasswordAuthentication to `PasswordAuthentication no` , save and exit.
 * Restart the service with `sudo service ssh restart` for the changes to take effect.
+
+#### *Linux File Permissions*
+* Octal Permissions (rw-, r--, r--), (6,4,4)
+* Change file Group - `sudo chgrp root .bash_history`
+* View File as student `cat .bash_history`
+* Change file Owner - `sudo chown root .bash_history`
+* Change file Onwer back to student - `sudo chown student .bash_history`
+
+#### *Firewalls*
+* List of Ports - https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers
+* ubuntu default firewall check - `sudo ufw status`
+* Block all connections coming in - `sudo ufw default deny incoming`
+* Allow all connections outgoing from our server - `sudo ufw default allow outgoing`
+* Check status of our ubuntu default firewall again - `sudo ufw status`
+* Allow all SSH connections - `sudo ufw allow ssh`
+* Allow our Vagrant SSH set up all tcp on port 2222- `sudo ufw allow 2222/tcp`
+* Allow support for our basic HTTP server - `sudo ufw allow www`
+* Enable our Firewall (*only once we have configured our firewall correctly*) - `sudo ufw enable`
+* Check out status to see implementation of firewall using - `sudo ufw status`
