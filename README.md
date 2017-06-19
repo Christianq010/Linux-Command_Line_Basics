@@ -154,4 +154,10 @@ Once it is done, run the command `vagrant ssh`.
 * Run `chmod 644 .ssh/authorized_keys`
 
 * *Now proceed to log into your vagrant Student Account directly via SSH key*
-```ssh student@127.0.0.1 -p 2222 -i ~/.ssh/linuxCourse```
+```
+ssh student@127.0.0.1 -p 2222 -i ~/.ssh/linuxCourse
+```
+
+* Forcing SSH key based Authentication for Users, by editing `sshd` - `sudo nano /etc/ssh/sshd_config`
+* Once open with nano , change `PasswordAuthentication no` , save and exit.
+* Restart the service with `sudo service ssh restart` for the changes to take effect.
