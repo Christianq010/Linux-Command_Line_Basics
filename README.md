@@ -180,3 +180,24 @@ ssh student@127.0.0.1 -p 2222 -i ~/.ssh/linuxCourse
 * Allow support for our basic HTTP server - `sudo ufw allow www`
 * Enable our Firewall (*only once we have configured our firewall correctly*) - `sudo ufw enable`
 * Check out status to see implementation of firewall using - `sudo ufw status`
+
+============================================
+
+## 03. Linux - Web Application Servers
+
+* Use the `Apache HTTP Server` to respond to HTTP requests and serve a static webpage
+* Configure `Apache` to hand-off specific requests to Python providing the ability to develop dynamic websites
+* Setup `PostgreSQL` and write a simple Python application that generates a data-driven website
+
+#### Vagrant Pre-requisites (only for Vagrant)
+* Add the following line to your `Vagrantfile` in the project directory
+```
+config.vm.network "forwarded_port", guest: 80, host: 8080
+```
+
+On some Windows machines you may have to add this instead
+```
+config.vm.network "forwarded_port", guest: 80, host: 8080, host_ip: "127.0.0.1"
+```
+
+* Run `vagrant up` or if you are already running vagrant run `vagrant reload` to refresh.
