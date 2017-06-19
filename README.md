@@ -158,6 +158,6 @@ Once it is done, run the command `vagrant ssh`.
 ssh student@127.0.0.1 -p 2222 -i ~/.ssh/linuxCourse
 ```
 
-* Forcing SSH key based Authentication for Users, by editing `sshd` - `sudo nano /etc/ssh/sshd_config`
-* Once open with nano , change `PasswordAuthentication no` , save and exit.
+* Force SSH key based Authentication for all Users, by editing file sshd - `sudo nano /etc/ssh/sshd_config`
+* Once open with nano , change PasswordAuthentication to `PasswordAuthentication no` , save and exit.
 * Restart the service with `sudo service ssh restart` for the changes to take effect.
