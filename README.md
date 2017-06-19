@@ -132,8 +132,25 @@ Once it is done, run the command `vagrant ssh`.
 * #### *User Management*
 * Creating a new User - `sudo adduser student`, password - student
 * Connecting as new user - `ssh student@127.0.0.1 -p 2222`
-* Give sudo access by - editing file `sudoers.d` -
+* Give sudo access by - editing file `sudoers.d`
 * First list sudo files by `sudo ls /etc/sudoers.d`, then copy the file by `sudo cp /etc/sudoers.d/vagrant /etc/sudoers.d/student`
 * Edit file with nano - `sudo nano /etc/sudoers.d/student` and make the `student ALL=(ALL) NOPASSWD:ALL` change.
 * Additional info on Sudo Access (https://help.ubuntu.com/community/Sudoers), info on passwd - `man passwd`
 * Log in as student, and try to run `sudo cat /etc/passwd`
+
+* #### *Public Key Encryption*
+##### Local machine
+* Always generate keygen on Localhost, never on server.
+* Open Gitbash as administrator on desktop
+* To generate keygen `ssh-keygen`, Enter eg. location `/home/Udacity/.ssh/linuxCourse` on windows change location with `C:\Users\Christiaan\.ssh\linuxCourse` , passphrase: `basic`
+##### User on Vagrant
+* Log in via the `student` account, on the home directory
+* Type `mkdir .ssh` and then create a file to store all our keys with `sudo touch .ssh/authorized_keys`
+* On the Local machine, Open the file via `cat .ssh/linuxCourse.pub` and copy the contents.
+* Back on the `student` account, paste the copied content by editing the file with nano via `sudo touch .ssh/authorized_keys` and saving it.
+
+* Set Appropriate File Permissions (Continue on Student@Vagrant User)
+* Run `chmod 700 .ssh`
+* Run `chmod 644 .ssh/authorized_keys`
+
+* *Now proceed to log into your vagrant Student Account directly via SSH key `ssh student@127.0.0.1 -p 2222 -i ~/.ssh/linuxCourse`*
