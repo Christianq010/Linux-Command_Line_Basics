@@ -102,7 +102,7 @@ Once it is done, run the command `vagrant ssh`.
 * `mkdir someName` - to create a new directory. `mkdir /tmp/someName`
 * `rmdir someFileName` - to delete an empty directory, `rm -r junk` - to delete a directory with all its contents in it.
 #### To glob (search using *) -
-* `ls *html` ( search of all files with html in the filename)
+* `ls *html` ( search of all files with html in the filename) eg. `ls -l Documents/*.pdf`
 * `ls app*` - returns app.js, app.html
 * `ls *pp*` - returns app.js, app.html
 * `ls app.{css,html}` - (all css and html app files)
@@ -111,6 +111,9 @@ Once it is done, run the command `vagrant ssh`.
 * Copy all the files in the `www` directory that end in `html` to the backUp directory - `cp www/*html backup`
 * List all the files that end in `jpg` or `png` in the current directory - `ls *{jpg,png}` or `ls *jpg *png`
 * Print `Short names:` followed by all the one-character filenames in the current directory. - `echo Short names: ?`
+
+##### Resources 
+* A tool for editing bash - http://bashrcgenerator.com by Julien Ricard.
 
 ==============================================
 
