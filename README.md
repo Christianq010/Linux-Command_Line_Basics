@@ -201,3 +201,8 @@ config.vm.network "forwarded_port", guest: 80, host: 8080, host_ip: "127.0.0.1"
 ```
 
 * Run `vagrant up` or if you are already running vagrant run `vagrant reload` to refresh.
+
+#### Install Apache
+* Install Apache using your package manager with the following command: `sudo apt-get install apache2`
+* Confirm Apache is working by visiting `http://localhost:8080` in your browser
+* Apache, by default, serves its files from the `/var/www/html` directory. Explore this directory to edit `index.html`
