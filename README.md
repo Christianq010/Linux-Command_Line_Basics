@@ -206,3 +206,15 @@ config.vm.network "forwarded_port", guest: 80, host: 8080, host_ip: "127.0.0.1"
 * Install Apache using your package manager with the following command: `sudo apt-get install apache2`
 * Confirm Apache is working by visiting `http://localhost:8080` in your browser
 * Apache, by default, serves its files from the `/var/www/html` directory. Explore this directory to edit `index.html`
+
+#### Install mod_wsgi
+* Install mod_wsgi: `sudo apt-get install libapache2-mod-wsgi`
+* We then need to configure Apache to handle requests using the WSGI module, `cd` to `/etc/apache2/sites-enabled/000-default.conf`
+* This file tells Apache how to respond to requests, where to find the files for a particular site and much more (Apache Documentation)[https://httpd.apache.org/docs/2.2/configuring.html].
+* Add the following line at the end of the `<VirtualHost *:80>` block, right before the closing `</VirtualHost>`
+```
+<VirtualHost *:80>
+    WSGIScriptAlias / /var/www/html/myapp.wsgi
+</VirtualHost> 
+```
+* Restart Apache with `sudo apache2ctl restart`
