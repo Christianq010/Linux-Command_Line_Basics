@@ -210,7 +210,7 @@ config.vm.network "forwarded_port", guest: 80, host: 8080, host_ip: "127.0.0.1"
 #### Install mod_wsgi
 * Install mod_wsgi: `sudo apt-get install libapache2-mod-wsgi`
 * We then need to configure Apache to handle requests using the WSGI module, `cd` to `/etc/apache2/sites-enabled/000-default.conf`
-* This file tells Apache how to respond to requests, where to find the files for a particular site and much more (Apache Documentation)[https://httpd.apache.org/docs/2.2/configuring.html].
+* This file tells Apache how to respond to requests, where to find the files for a particular site and much more [Apache Documentation](https://httpd.apache.org/docs/2.2/configuring.html).
 * Add the following line at the end of the `<VirtualHost *:80>` block, right before the closing `</VirtualHost>`
 ```
 <VirtualHost *:80>
@@ -218,3 +218,7 @@ config.vm.network "forwarded_port", guest: 80, host: 8080, host_ip: "127.0.0.1"
 </VirtualHost> 
 ```
 * Restart Apache with `sudo apache2ctl restart`
+
+#### Our First WSGI Application
+* Quickly test our Apache configuration by writing a very basic WSGI application (http://wsgi.readthedocs.org/en/latest/).
+* 
