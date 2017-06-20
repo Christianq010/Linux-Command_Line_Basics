@@ -221,4 +221,22 @@ config.vm.network "forwarded_port", guest: 80, host: 8080, host_ip: "127.0.0.1"
 
 #### Our First WSGI Application
 * Quickly test our Apache configuration by writing a very basic WSGI application (http://wsgi.readthedocs.org/en/latest/).
-* 
+* Despite having the extension `.wsgi`, these are just Python applications.
+* Create the `/var/www/html/myapp.wsgi` file using the command `sudo nano /var/www/html/myapp.wsgi`
+* Within this file, write the following application:
+```
+def application(environ, start_response):
+    status = '200 OK'
+    output = 'Hello World!'
+
+    response_headers = [('Content-type', 'text/plain'), ('Content-Length', str(len(output)))]
+    start_response(status, response_headers)
+
+    return [output]
+```
+*  Reload (http://localhost:8080) to see your application run.
+
+##### Installing PostgreSQL
+* Install PostgreSQL to server your data using the command `sudo apt-get install postgresql`.
+* Note : Since you are installing your web server and database server on the same machine, you do not need to modify your firewall settings. Your web server will communicate with the database via an internal mechanism that does not cross the boundaries of the firewall. If you were installing your database on a separate machine, you would need to modify the firewall settings on both the web server and the database server to permit these requests.
+
