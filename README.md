@@ -128,7 +128,7 @@ Once it is done, run the command `vagrant ssh`.
 * Upgrade Installed Packages - `sudo apt-get upgrade`
 * Read manual for package update/upgrades - `man apt-get`
 * Auto remove packages that used - `sudo apt-get autoremove`
-* Install a particular package - `sudo apt-get finger` [List of Ubuntu packages](https://packages.ubuntu.com/)
+* Install a particular package - `sudo apt-get finger` or `sudo apt-get install finger` - [List of Ubuntu packages](https://packages.ubuntu.com/)
 * Get info about each user on system `cat /etc/passwd`.
 * Eg. User account `root` would show - User ID (UID): `0`, Group ID(GID): `0`, Home Directory: `/root`, Default Command/shell: `/bin/bash`
 
